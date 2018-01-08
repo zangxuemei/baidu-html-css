@@ -1,0 +1,939 @@
+@charset "UTF-8";
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+html, body {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi,'microsoft yahei ui','microsoft yahei',simsun,sans-serif; }
+
+body {
+  margin: 0; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden],
+template {
+  display: none; }
+
+a {
+  background-color: transparent; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b,
+strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  line-height: 1.6;
+  font-size: 0.1866666667rem !important; }
+
+/*首页~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.container {
+  width: auto;
+  max-width: 10.24rem;
+  margin: 0 auto;
+  overflow: hidden;
+  color: #333;
+  font-size: 0.3733333333rem;
+  background: #F4FAFF; }
+  @media (min-width: 541px) and (max-width: 768px) {
+    [data-dpr="1"] .container {
+      max-width: 768px; } }
+
+/*导航*/
+.warp .header {
+  height: 1.2266666667rem;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.48);
+  padding-left: 0.6133333333rem;
+  position: fixed;
+  top: 0; }
+  .warp .header .logo {
+    height: 1.2266666667rem; }
+    .warp .header .logo img {
+      width: 1.04rem;
+      height: 112%; }
+    .warp .header .logo .title {
+      font-family: PingFangSC-Semibold,sans-serif;
+      font-size: 0.4533333333rem;
+      color: #FFFFFF;
+      letter-spacing: 0.0252rem;
+      padding-left: 1.3333333333rem; }
+  .warp .header .tool {
+    padding-top: 0.0666666667rem;
+    padding-right: 0.3333333333rem; }
+
+/*横幅*/
+.banner_box {
+  width: 10rem;
+  height: 6.1866666667rem; }
+
+.banner {
+  width: 100%; }
+
+/*版本2的不用了*/
+/*about内容*/
+/*.about-content-box{
+}
+.about-content-box .content-img-box{
+  padding: rem(70) rem(76) 0 rem(76);
+  margin-bottom:  -0.6rem;
+}
+.about-content-box .content-img{
+  width: rem(620);
+  height: rem(540);
+  vertical-align: bottom;
+}
+.content-wrap{
+  background: #F6FBFF;
+}
+.about-content-box .content-box{
+  width: rem(562);
+  height: rem(177);
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0 rem(4) rem(8) 0 #C3E2F7;
+}
+.about-content-box .content-box .content{
+  padding: rem(35) 0 rem(25) rem(38);
+
+}
+.about-content-box .content-box .content li{
+  font-family: PingFangSC-Regular,sans-serif;
+  font-size: rem(20);
+  color: #222222;
+  letter-spacing: rem(1.27);
+  line-height: rem(33);
+}
+.about-content-box .content-box .content li span{
+  font-size: rem(24);
+  color: #1E8AFF;
+}
+.about-content-box .content-box  .content-style{
+  position: absolute;
+  bottom: -16%;
+  right: 12%;
+  font-family: CloudYuanXiGBK,sans-serif;
+  font-size: rem(94);
+  color: rgba(0,148,255,0.10);
+  letter-spacing: rem(9.92);
+}*/
+/*about内容*/
+.about-content-warp {
+  background: #fff; }
+  .about-content-warp .about-content {
+    width: 8.36rem;
+    margin: 0 auto;
+    background: #fff; }
+    .about-content-warp .about-content .first {
+      height: 3.7333333333rem; }
+    .about-content-warp .about-content .second {
+      height: 3.4666666667rem; }
+    .about-content-warp .about-content .third {
+      height: 3.4666666667rem; }
+    .about-content-warp .about-content li {
+      border-bottom: 1px solid #CDCDCD;
+      width: 100%; }
+      .about-content-warp .about-content li:last-child {
+        border-bottom: none; }
+      .about-content-warp .about-content li p {
+        display: inline-block;
+        width: 4.8rem;
+        font-family: PingFangSC-Medium,sans-serif;
+        font-size: 0.2666666667rem;
+        color: #888888;
+        letter-spacing: 0; }
+        .about-content-warp .about-content li p .number {
+          font-family: CTCuYuanSF,sans-serif;
+          font-size: 0.8rem;
+          color: #34A1FF;
+          letter-spacing: 0; }
+        .about-content-warp .about-content li p .text {
+          font-family: PingFangSC-Medium,sans-serif;
+          font-size: 0.4rem;
+          color: #161616;
+          letter-spacing: 0; }
+      .about-content-warp .about-content li .content-img {
+        float: right;
+        width: 3.3333333333rem;
+        height: 2.5333333333rem;
+        margin-top: 0.4666666667rem; }
+      .about-content-warp .about-content li .content-img-left {
+        float: left;
+        width: 3.3333333333rem;
+        height: 2.5333333333rem;
+        margin-top: 0.4666666667rem; }
+
+/*about内容*/
+/*special*/
+.content-wrap {
+  padding-bottom: 0.6666666667rem;
+  /*分页器*/ }
+  .content-wrap .swiper-pagination {
+    position: unset; }
+    .content-wrap .swiper-pagination .swiper-pagination-bullet {
+      width: 0.1066666667rem;
+      height: 0.1066666667rem;
+      margin-right: 0.16rem; }
+  .content-wrap .special {
+    width: 8rem;
+    height: 5.6666666667rem;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    background: #fff; }
+    .content-wrap .special h3 {
+      font-family: PingFangSC-Regular, sans-serif;
+      font-size: 0.3733333333rem;
+      color: #242424;
+      letter-spacing: 0;
+      padding-top: 0.4133333333rem;
+      padding-bottom: 0.3333333333rem; }
+    .content-wrap .special img {
+      width: 7.6533333333rem;
+      height: 2.5066666667rem; }
+    .content-wrap .special ul {
+      width: 100%;
+      padding: 0.4133333333rem 0; }
+      .content-wrap .special ul li {
+        display: inline-block;
+        padding: 0 0.24rem; }
+        .content-wrap .special ul li .special-icon {
+          width: 0.4533333333rem;
+          height: 0.4533333333rem; }
+        .content-wrap .special ul li p {
+          font-family: PingFangSC-Medium, sans-serif;
+          font-size: 0.2666666667rem;
+          color: #888888;
+          letter-spacing: 0; }
+
+/*project*/
+/*scene--场景合作*/
+.scene-wrap {
+  width: 10rem;
+  height: 7.5066666667rem;
+  background: url("../img/background-img.jpg") center no-repeat;
+  text-align: center; }
+
+.scene-wrap .title1 {
+  padding-top: 0.8rem;
+  font-family: PingFangSC-Medium,sans-serif;
+  font-size: 0.4533333333rem;
+  color: #FFFFFF;
+  letter-spacing: 0.0252rem; }
+
+.scene-wrap .title-message {
+  padding-bottom: 0.2666666667rem;
+  font-family: PingFangSC-Light,sans-serif;
+  font-size: 0.24rem;
+  color: #FFFFFF;
+  letter-spacing: 0.0133333333rem; }
+
+.project1-content-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 10rem; }
+
+.project1-content-box .project-content {
+  width: 4.4266666667rem;
+  /*  height: rem(70);*/
+  background: #fff;
+  margin: 0.1333333333rem;
+  text-align: left;
+  padding: 0.4933333333rem 0 0.5466666667rem 0;
+  line-height: 1; }
+
+.project1-content-box .project-content .project1-content-img {
+  /*  width: rem(66);*/
+  height: 0.88rem;
+  padding: 0 0.2533333333rem 0 0.3466666667rem;
+  float: left; }
+
+.project1-content-box .project-content .ff {
+  font-family: PingFangSC-Medium,sans-serif;
+  font-size: 0.4rem;
+  color: #2A2A2A;
+  letter-spacing: 0.0281333333rem; }
+
+.project1-content-box .project-content .ff-message {
+  font-family: PingFangSC-Regular,sans-serif;
+  font-size: 0.2666666667rem;
+  color: #000000;
+  letter-spacing: 0.0281333333rem;
+  line-height: 0.56rem; }
+
+/*project*/
+/*project2--合作方式*/
+.project2-wrap {
+  text-align: center;
+  margin: 1.0933333333rem auto 1.2rem auto; }
+
+/*标题2*/
+.title2 {
+  font-family: PingFangSC-Medium,sans-serif;
+  font-size: 0.4533333333rem;
+  color: #000000;
+  letter-spacing: 0;
+  padding-top: 0.64rem;
+  padding-bottom: 0.6533333333rem;
+  text-align: center; }
+
+.project2-wrap .project2-content-box {
+  width: 9.1466666667rem;
+  height: 11.4933333333rem;
+  margin: 0 auto;
+  padding-top: 0.7866666667rem;
+  background: #FFFFFF; }
+
+/*.project2-wrap .project2-content-box .content-img{
+  padding-top: rem(72);
+  height: rem(598);
+}*/
+.project2-wrap .project2-content-box table {
+  margin: 0 auto;
+  font-family: PingFangSC-Regular,sans-serif;
+  font-size: 0.32rem;
+  color: #2A2A2A;
+  letter-spacing: 0; }
+  .project2-wrap .project2-content-box table th, .project2-wrap .project2-content-box table td {
+    border-right: 0.0133333333rem solid #D6D6D6;
+    width: 2.9333333333rem;
+    text-align: center; }
+    .project2-wrap .project2-content-box table th:last-child, .project2-wrap .project2-content-box table td:last-child {
+      border-right: none; }
+  .project2-wrap .project2-content-box table .project2-logo {
+    width: 1.1466666667rem;
+    height: 1.1466666667rem; }
+  .project2-wrap .project2-content-box table th {
+    font-family: PingFangSC-Semibold,sans-serif;
+    font-size: 0.4rem;
+    height: 1.6rem;
+    line-height: 1.6rem; }
+  .project2-wrap .project2-content-box table td {
+    height: 0.9333333333rem;
+    line-height: 0.9333333333rem; }
+    .project2-wrap .project2-content-box table td .border {
+      border-bottom: 0.0133333333rem solid #D6D6D6;
+      width: 0.9733333333rem;
+      margin-left: 0.9733333333rem;
+      position: absolute; }
+
+.project2-wrap .project2-content-box a {
+  width: 6.36rem;
+  height: 0.96rem;
+  margin-top: 0.7866666667rem;
+  background: #2798F9;
+  border-radius: 0.1333333333rem;
+  font-family: PingFangSC-Regular,sans-serif;
+  font-size: 0.4rem;
+  color: #FFFFFF;
+  letter-spacing: 0; }
+
+/*客户案例*/
+.case {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.9733333333rem 0 1.0666666667rem 0;
+  background: #FFF; }
+
+.case .content-img {
+  width: 9.1466666667rem;
+  height: 3.6533333333rem; }
+
+/*联系我们*/
+.contact {
+  width: 100%;
+  height: 4.7733333333rem;
+  background: #34373B;
+  padding: 0.6666666667rem 0 0.6666666667rem 0.6533333333rem; }
+
+.contact .footer-left {
+  float: left;
+  width: 41%; }
+
+.contact .footer-right {
+  float: left;
+  width: 50%;
+  height: 3.3466666667rem;
+  border-left: 1px solid #5E5E5E;
+  padding-left: 0.6533333333rem; }
+
+.contact h3 {
+  font-family: PingFangSC-Regular,sans-serif;
+  font-size: 0.4rem;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: 1.28rem; }
+
+.contact p {
+  font-family: PingFangSC-Regular,sans-serif;
+  font-size: 0.3466666667rem;
+  color: #BDBDBD;
+  letter-spacing: 0; }
+
+/*页脚*/
+.footer-main {
+  width: 100%;
+  height: 1.9733333333rem;
+  background: #1E1F20;
+  text-align: center;
+  padding: 0.3466666667rem 0; }
+  .footer-main p {
+    font-family: PingFangSC-Regular, sans-serif;
+    font-size: 0.2666666667rem;
+    color: #C6CDCF;
+    letter-spacing: 0;
+    line-height: 0.4266666667rem; }
+
+/*联系我们contact页面~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.project {
+  background: #fff; }
+  .project ul {
+    width: 8.6666666667rem;
+    margin: 0 auto;
+    padding: 0.5333333333rem 0 1.3333333333rem 0;
+    font-family: PingFangSC-Regular,sans-serif;
+    font-size: 0.4rem;
+    color: #1C1C1C;
+    letter-spacing: 0;
+    background: #fff; }
+    .project ul li {
+      border-bottom: 1px solid #CDCDCD;
+      padding-top: 0.2666666667rem;
+      padding-bottom: 0.2666666667rem;
+      padding-left: 1.0666666667rem; }
+      .project ul li:last-child {
+        border-bottom: none; }
+      .project ul li .adress-img {
+        width: 7.6rem;
+        height: 2.1333333333rem; }
+    .project ul .phone {
+      background: url("../img/contact-lianxi_phone.png") no-repeat left 25%;
+      background-size: 0.8133333333rem 0.8133333333rem; }
+    .project ul .email {
+      background: url("../img/contact-lianxi_mail.png") no-repeat left 25%;
+      background-size: 0.8133333333rem 0.8133333333rem; }
+    .project ul .adress {
+      background: url("../img/contact-lianxi_adress.png") no-repeat left 5%;
+      background-size: 0.8133333333rem 0.8133333333rem; }
+
+.footer {
+  width: 100%;
+  height: 1.6266666667rem;
+  background: #1E1F20;
+  text-align: center;
+  padding: 0.16rem 0; }
+  .footer p {
+    font-family: PingFangSC-Regular, sans-serif;
+    font-size: 0.2666666667rem;
+    color: #C6CDCF;
+    letter-spacing: 0;
+    line-height: 0.4266666667rem; }
+
+/*申请合作application页面~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.apply {
+  width: 100%;
+  font-family: PingFangSC-Regular,sans-serif;
+  font-size: 0.4rem;
+  color: #1C1C1C;
+  letter-spacing: 0;
+  line-height: 2.5; }
+  .apply span {
+    font-family: PingFangSC-Regular,sans-serif;
+    font-size: 0.4533333333rem;
+    color: #F1643E;
+    letter-spacing: 0; }
+  .apply .frame {
+    width: 8.72rem;
+    height: 1rem;
+    border: 1px solid #C8C8C8; }
+  .apply .info {
+    background: #fff;
+    padding-left: 0.6266666667rem;
+    padding-top: 0.8rem;
+    margin-bottom: 0.32rem; }
+  .apply .tel {
+    background: #fff;
+    padding-left: 0.6266666667rem;
+    padding-bottom: 0.7866666667rem; }
+  .apply .submit {
+    text-align: center;
+    padding-top: 0.8666666667rem;
+    padding-bottom: 1.7733333333rem; }
+    .apply .submit button {
+      width: 4.6666666667rem;
+      height: 1.2rem;
+      background: #14A7FC;
+      border-radius: 0.1066666667rem;
+      font-family: PingFangSC-Regular,sans-serif;
+      font-size: 0.4533333333rem;
+      color: #FFFFFF;
+      letter-spacing: 0; }
+
+/*场景合作sence页面~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.scene-wrap1 {
+  width: 10rem;
+  height: 7.5066666667rem;
+  margin-top: 0.96rem;
+  text-align: center; }
+
+.scene-end {
+  text-align: center;
+  padding-bottom: 0.8133333333rem;
+  font-family: PingFangSC-Light,sans-serif;
+  font-size: 0.32rem;
+  color: #5E5E5E;
+  letter-spacing: 0.0337333333rem; }
+
+/*场景合作页面的四组~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.scene-title {
+  margin: 0 auto;
+  padding-bottom: 0.4666666667rem;
+  width: 2.8133333333rem;
+  text-align: center;
+  font-family: PingFangSC-Medium,sans-serif;
+  font-size: 0.4rem;
+  color: #383838;
+  letter-spacing: 0; }
+  .scene-title .left {
+    width: 0.16rem;
+    height: 0.16rem;
+    transform: rotate(45deg);
+    background: #21A6F9;
+    display: inline-block;
+    float: left;
+    margin-top: 0.24rem; }
+  .scene-title .right {
+    width: 0.16rem;
+    height: 0.16rem;
+    transform: rotate(45deg);
+    background: #21A6F9;
+    display: inline-block;
+    float: right;
+    margin-top: 0.24rem; }
+
+.container-info .container {
+  width: auto;
+  max-width: 10.24rem;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff; }
+  @media (min-width: 541px) and (max-width: 768px) {
+    [data-dpr="1"] .container-info .container {
+      max-width: 768px; } }
+
+.more {
+  text-align: center; }
+  .more a {
+    font-family: PingFangSC-Regular,sans-serif;
+    font-size: 0.3733333333rem;
+    color: #007aff;
+    letter-spacing: 0; }
+
+/*体育sports~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.sport-wrap {
+  background: #fff;
+  width: 10rem;
+  padding-top: 0.72rem;
+  padding-bottom: 0.28rem;
+  margin-bottom: 0.28rem; }
+  .sport-wrap .title-message {
+    margin: 0 auto;
+    width: 90%;
+    /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!这里用到了js！！！！！！*/ }
+    .sport-wrap .title-message li {
+      background: #FFFFFF;
+      box-shadow: 0 0.0533333333rem 0.1333333333rem 0 #CDF3FF;
+      font-family: PingFangSC-Regular,sans-serif;
+      font-size: 0.3733333333rem;
+      color: #808080;
+      letter-spacing: 0;
+      display: inline-block;
+      text-align: center;
+      height: 1rem;
+      line-height: 1rem;
+      width: 32%; }
+    .sport-wrap .title-message > li.active {
+      background-image: linear-gradient(90deg, #48CFF3 0%, #1CA1FA 100%);
+      box-shadow: 0 0.0533333333rem 0.1333333333rem 0 #CDF3FF;
+      font-family: PingFangSC-Medium,sans-serif;
+      font-size: 0.4rem;
+      color: #FFFFFF;
+      letter-spacing: 0; }
+
+.tab-box {
+  margin: 0 auto;
+  width: 9.2266666667rem; }
+  .tab-box li {
+    display: none;
+    text-align: center; }
+    .tab-box li p {
+      font-family: PingFangSC-Medium,sans-serif;
+      font-size: 0.4533333333rem;
+      color: #FFFFFF;
+      letter-spacing: 0;
+      line-height: 2.5;
+      padding-top: 0.3866666667rem; }
+      .tab-box li p span {
+        font-size: 0.3733333333rem; }
+    .tab-box li .sport1 {
+      background: url("../img/sports-gongzhongzeren.png");
+      background-size: 9.2266666667rem 3.04rem;
+      width: 9.2266666667rem;
+      height: 3.04rem; }
+    .tab-box li .sport2 {
+      background: url("../img/sports-zuzhifang.png");
+      background-size: 9.2266666667rem 3.04rem;
+      width: 9.2266666667rem;
+      height: 3.04rem; }
+    .tab-box li .sport3 .sport3-1 {
+      background: url("../img/sports-yiwai1.png");
+      background-size: 9.2266666667rem 3.04rem;
+      width: 9.2266666667rem;
+      height: 3.04rem; }
+    .tab-box li .sport3 .sport3-2 {
+      background: url("../img/sports-yiwai2.png");
+      background-size: 9.2266666667rem 3.04rem;
+      width: 9.2266666667rem;
+      height: 3.04rem; }
+    .tab-box li .sport3 .sport3-3 {
+      background: url("../img/sports-yiwai3.png");
+      background-size: 9.2266666667rem 3.04rem;
+      width: 9.2266666667rem;
+      height: 3.04rem; }
+    .tab-box li .sport3 .sport3-4 {
+      background: url("../img/sports-yiwai4.png");
+      background-size: 9.2266666667rem 3.04rem;
+      width: 9.2266666667rem;
+      height: 3.04rem; }
+    .tab-box li .sport3 .sport3-5 {
+      background: url("../img/sports-yiwai5.png");
+      background-size: 9.2266666667rem 3.04rem;
+      width: 9.2266666667rem;
+      height: 3.04rem; }
+  .tab-box > li.live {
+    display: block; }
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!结束！！！！！！*/
+.sport {
+  width: 95%;
+  margin: 0 auto; }
+
+.QA {
+  background: #fff;
+  padding-top: 0.5466666667rem;
+  padding-bottom: 0.4933333333rem; }
+  .QA ul {
+    width: 8.5333333333rem;
+    /*   height: rem(561);*/
+    margin: 0 auto; }
+    .QA ul li {
+      padding-left: 0.8rem;
+      padding-top: 0.1333333333rem;
+      margin-bottom: 0.3066666667rem;
+      background: url("../img/sports-Q.PNG") no-repeat left top;
+      background-size: 0.8133333333rem 0.8133333333rem;
+      font-family: PingFangSC-Regular,sans-serif;
+      font-size: 0.32rem;
+      color: #393939;
+      letter-spacing: 0;
+      line-height: 0.44rem; }
+      .QA ul li span {
+        color: #000000; }
+
+/*留学study~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.study-info {
+  width: 8.5333333333rem;
+  margin: 0 auto;
+  padding-top: 0.7333333333rem;
+  padding-bottom: 0.4666666667rem;
+  list-style-type: disc;
+  font-family: PingFangSC-Regular,sans-serif;
+  font-size: 0.32rem;
+  color: #566979;
+  letter-spacing: 0;
+  line-height: 0.7066666667rem;
+  padding-left: 3%; }
+
+.study-img1 {
+  width: 9.2rem;
+  height: 8.92rem; }
+
+.study-project {
+  text-align: center;
+  padding-bottom: 0.7333333333rem; }
+
+.study-warp {
+  background: #fff; }
+
+.study-tab-wrap {
+  padding-bottom: 0.5866666667rem; }
+  .study-tab-wrap .tab-box .study1 {
+    background: url("../img/study-USA.png");
+    background-size: 9.2266666667rem 3.04rem;
+    width: 9.2266666667rem;
+    height: 3.04rem; }
+  .study-tab-wrap .tab-box .study2 .study2-1 {
+    background: url("../img/study-AUS1.png");
+    background-size: 9.2266666667rem 3.04rem;
+    width: 9.2266666667rem;
+    height: 3.04rem; }
+  .study-tab-wrap .tab-box .study2 .study2-2 {
+    background: url("../img/study-AUS2.png");
+    background-size: 9.2266666667rem 3.04rem;
+    width: 9.2266666667rem;
+    height: 3.04rem; }
+  .study-tab-wrap .tab-box .study2 .study2-3 {
+    background: url("../img/study-AUS3.png");
+    background-size: 9.2266666667rem 3.04rem;
+    width: 9.2266666667rem;
+    height: 3.04rem; }
+
+/*留学详情studyinfo~~~~~~~~~~~~~~~~~~*/
+.banner2-box {
+  width: 90%;
+  height: 2.0266666667rem;
+  position: relative;
+  margin: 0 auto 0.7066666667rem auto; }
+  .banner2-box .banner2 {
+    position: absolute;
+    bottom: 0; }
+
+.studyinfo-project {
+  width: 88%;
+  padding-bottom: 0.8666666667rem;
+  margin: 0 auto; }
+  .studyinfo-project h3 {
+    font-family: PingFangSC-Medium,sans-serif;
+    font-size: 0.4rem;
+    color: #353535;
+    letter-spacing: 0; }
+  .studyinfo-project p {
+    font-family: PingFangSC-Regular,sans-serif;
+    font-size: 0.3733333333rem;
+    color: #566979;
+    letter-spacing: 0;
+    text-align: justify; }
+
+.studyinfo-img {
+  text-align: center; }
+  .studyinfo-img .studyinfo-img1 {
+    width: 7.4266666667rem;
+    height: 3.0533333333rem;
+    margin: 0.1333333333rem 0 0 0; }
+
+/*O2O~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.scene-title2 {
+  text-align: center;
+  padding-top: 0.5733333333rem;
+  font-family: PingFangSC-Medium,sans-serif;
+  font-size: 0.4rem;
+  color: #000000;
+  letter-spacing: 0; }
+
+.O2O-info {
+  width: 8.96rem;
+  margin: 0 auto;
+  padding-top: 0.7333333333rem;
+  padding-bottom: 0.4666666667rem;
+  list-style-type: disc;
+  font-family: PingFangSC-Regular,sans-serif;
+  font-size: 0.32rem;
+  color: #566979;
+  letter-spacing: 0;
+  line-height: 0.44rem;
+  padding-left: 3%; }
+
+.O2O-img1 {
+  width: 9.2rem;
+  /* height: rem(669);*/ }
+
+.O2O-project {
+  text-align: center;
+  padding-bottom: 0.7333333333rem; }
+
+/*金融finance~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.finance-warp {
+  background: #fff;
+  margin-bottom: 0.9733333333rem; }
+  .finance-warp .finance-info-warp {
+    background: url("../img/finance-background.jpg") no-repeat;
+    background-size: 9.2266666667rem 2.5866666667rem;
+    margin: 0 auto;
+    width: 9.2266666667rem;
+    padding-left: 10%; }
+    .finance-warp .finance-info-warp .finance-info {
+      width: 8.96rem;
+      padding-top: 0.2133333333rem;
+      padding-bottom: 0.2533333333rem;
+      list-style-type: disc;
+      font-family: PingFangSC-Regular,sans-serif;
+      font-size: 0.32rem;
+      color: #566979;
+      letter-spacing: 0;
+      line-height: 0.7066666667rem; }
+
+/*金融详情financeinfo~~~~~~~~~~~~~~~~~~*/
+
+/*# sourceMappingURL=index.css.map */

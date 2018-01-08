@@ -1,0 +1,71 @@
+@charset "UTF-8";
+@import "normalize";
+@import "customize";
+
+//1rem = 75
+$em-base:75;
+@function strip-units($value) {
+	@return $value / ($value * 0 + 1);
+}
+@function rem($pxval) {
+	@if not unitless($pxval) {
+		$pxval: strip-units($pxval);
+	}
+
+	$base: $em-base;
+	@if not unitless($base) {
+		$base: strip-units($base);
+	}
+	@return ($pxval / $base) * 1rem;
+}
+
+@mixin clearfix {
+	&::after {
+		clear: both;
+		content: "";
+		display: table;
+	}
+}
+
+.container {
+	width: auto;
+	max-width: rem(768);
+	@include maxWidth();
+	margin: 0 auto;
+	overflow: hidden;
+	color: #333;
+	font-size: rem(28);
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+
+}
+
+body {
+	max-width: 1920px;
+	line-height: 1.6;
+	font-size: 14px !important;
+}
+
+.header {
+	position: absolute;
+	top: 0;
+	width: rem(750);
+	z-index: 1111;
+	line-height: 1.42667rem;
+}
+
+.banner_box{
+	width: rem(750);
+	height: rem(464);
+}
+
+.logo_img{
+	width: 100px;
+}
+
+
+

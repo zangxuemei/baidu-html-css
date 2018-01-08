@@ -1,0 +1,904 @@
+@charset "UTF-8";
+@import "normalize";
+@import "customize";
+//1rem = 75
+$em-base:75;
+@function strip-units($value) {
+  @return $value / ($value * 0 + 1);
+}
+@function rem($pxval) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+
+  $base: $em-base;
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+  @return ($pxval / $base) * 1rem;
+}
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  line-height: 1.6;
+  font-size: rem(14) !important;
+}
+/*首页~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.container {
+  width: auto;
+  max-width: rem(768);
+  @include maxWidth();
+  margin: 0 auto;
+  overflow: hidden;
+  color: #333;
+  font-size: rem(28);
+  background: #F4FAFF;
+}
+
+
+/*导航*/
+
+.warp{
+  .header{
+    height: rem(92);
+    width: 100%;
+    background: rgba(0,0,0,0.48);
+    padding-left: rem(46);
+    position: fixed;
+    top: 0;
+    .logo{
+      height: rem(92);
+      img{
+        width: rem(78);
+        height: 112%;
+      }
+      .title{
+        font-family: PingFangSC-Semibold,sans-serif;
+        font-size: rem(34);
+        color: #FFFFFF;
+        letter-spacing: rem(1.89);
+        padding-left: rem(100);
+      }
+    }
+    .tool {
+      padding-top: rem(5);
+      padding-right: rem(25);
+    }
+  }
+}
+
+/*横幅*/
+.banner_box{
+  width: rem(750);
+  height: rem(464);
+}
+.banner{
+  width: 100%;
+}
+/*版本2的不用了*/
+/*about内容*/
+/*.about-content-box{
+}
+.about-content-box .content-img-box{
+  padding: rem(70) rem(76) 0 rem(76);
+  margin-bottom:  -0.6rem;
+}
+.about-content-box .content-img{
+  width: rem(620);
+  height: rem(540);
+  vertical-align: bottom;
+}
+.content-wrap{
+  background: #F6FBFF;
+}
+.about-content-box .content-box{
+  width: rem(562);
+  height: rem(177);
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0 rem(4) rem(8) 0 #C3E2F7;
+}
+.about-content-box .content-box .content{
+  padding: rem(35) 0 rem(25) rem(38);
+
+}
+.about-content-box .content-box .content li{
+  font-family: PingFangSC-Regular,sans-serif;
+  font-size: rem(20);
+  color: #222222;
+  letter-spacing: rem(1.27);
+  line-height: rem(33);
+}
+.about-content-box .content-box .content li span{
+  font-size: rem(24);
+  color: #1E8AFF;
+}
+.about-content-box .content-box  .content-style{
+  position: absolute;
+  bottom: -16%;
+  right: 12%;
+  font-family: CloudYuanXiGBK,sans-serif;
+  font-size: rem(94);
+  color: rgba(0,148,255,0.10);
+  letter-spacing: rem(9.92);
+}*/
+
+/*about内容*/
+.about-content-warp{
+  background: #fff;
+  .about-content{
+    width: rem(627);
+    margin: 0 auto;
+
+    background: #fff;
+    .first{
+      height: rem(280);
+    }
+    .second{
+      height: rem(260);
+    }
+    .third{
+      height: rem(260);
+    }
+    li {
+      border-bottom: 1px solid #CDCDCD;
+      width: 100%;
+      &:last-child{ border-bottom:none;}
+
+      p{
+        display:inline-block;
+        width: rem(360);
+        font-family: PingFangSC-Medium,sans-serif;
+        font-size: rem(20);
+        color: #888888;
+        letter-spacing: 0;
+        .number{
+          font-family: CTCuYuanSF,sans-serif;
+          font-size: rem(60);
+          color: #34A1FF;
+          letter-spacing: 0;
+        }
+        .text{
+          font-family: PingFangSC-Medium,sans-serif;
+          font-size: rem(30);
+          color: #161616;
+          letter-spacing: 0;
+        }
+      }
+      .content-img {
+        float: right;
+        width: rem(250);
+        height: rem(190);
+      margin-top: rem(35);
+      }
+
+      .content-img-left{
+        float: left;
+        width: rem(250);
+        height: rem(190);
+        margin-top: rem(35);
+      }
+    }
+  }
+}
+
+
+/*about内容*/
+/*special*/
+.content-wrap{
+  padding-bottom: rem(50);
+  /*分页器*/
+  .swiper-pagination {
+    position: unset;
+    .swiper-pagination-bullet {
+      width:rem(8);
+      height: rem(8);
+      margin-right: rem(12);
+    }
+  }
+  .special{
+    width: rem(600);
+    height: rem(425);
+    margin: 0 auto 0 auto;
+    text-align: center;
+    background: #fff;
+    h3{
+      font-family: PingFangSC-Regular, sans-serif;
+      font-size:  rem(28);
+      color: #242424;
+      letter-spacing: 0;
+      padding-top:rem(31);
+      padding-bottom: rem(25);
+    }
+    img{
+      width: rem(574);
+      height: rem(188);
+    }
+    ul{
+      width: 100%;
+      padding:rem(31) 0;
+      li{
+        display: inline-block;
+        padding:0 rem(18);
+        .special-icon{
+          width: rem(34);
+          height: rem(34);
+        }
+        p{
+          font-family: PingFangSC-Medium, sans-serif;
+          font-size: rem(20);
+          color: #888888;
+          letter-spacing: 0;
+        }
+      }
+    }
+  }
+}
+
+
+/*project*/
+/*scene--场景合作*/
+.scene-wrap{
+  width: rem(750);
+  height: rem(563);
+  background: url('../img/background-img.jpg') center no-repeat;
+  text-align:center;
+}
+.scene-wrap .title1{
+  padding-top: rem(60);
+  font-family: PingFangSC-Medium,sans-serif;
+  font-size: rem(34);
+  color: #FFFFFF;
+  letter-spacing: rem(1.89);
+
+}
+.scene-wrap .title-message{
+  padding-bottom: rem(20);
+  font-family: PingFangSC-Light,sans-serif;
+  font-size: rem(18);
+  color: #FFFFFF;
+  letter-spacing: rem(1);
+}
+
+ .project1-content-box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items:center;
+  width: rem(750);
+}
+.project1-content-box .project-content{
+  width: rem(332);
+/*  height: rem(70);*/
+  background: #fff;
+  margin: rem(10);
+  text-align: left;
+  padding: rem(37) 0 rem(41) 0;
+  line-height: 1;
+}
+.project1-content-box .project-content .project1-content-img{
+/*  width: rem(66);*/
+  height: rem(66);
+  padding: 0 rem(19) 0 rem(26);
+  float: left;
+}
+
+.project1-content-box .project-content .ff{
+  font-family: PingFangSC-Medium,sans-serif;
+  font-size: rem(30);
+  color: #2A2A2A;
+  letter-spacing: rem(2.11);
+}
+.project1-content-box .project-content .ff-message{
+  font-family: PingFangSC-Regular,sans-serif;
+  font-size: rem(20);
+  color: #000000;
+  letter-spacing: rem(2.11);
+  line-height: rem(42);
+}
+/*project*/
+/*project2--合作方式*/
+.project2-wrap{
+  text-align:center;
+  margin: rem(82) auto rem(90) auto;
+}
+/*标题2*/
+.title2{
+  font-family: PingFangSC-Medium,sans-serif;
+  font-size: rem(34);
+  color: #000000;
+  letter-spacing: 0;
+  padding-top: rem(48);
+  padding-bottom: rem(49);
+  text-align: center;
+}
+.project2-wrap .project2-content-box{
+  width: rem(686);
+  height: rem(862);
+  margin: 0 auto ;
+  padding-top: rem(59);
+  background: #FFFFFF;
+}
+/*.project2-wrap .project2-content-box .content-img{
+  padding-top: rem(72);
+  height: rem(598);
+}*/
+
+.project2-wrap .project2-content-box table{
+  margin: 0 auto ;
+  font-family: PingFangSC-Regular,sans-serif;
+  font-size: rem(24);
+  color: #2A2A2A;
+  letter-spacing: 0;
+
+  th,td{
+    border-right: rem(1) solid #D6D6D6 ;
+    &:last-child{border-right: none;}
+    width: rem(220);
+    text-align: center;
+  }
+  .project2-logo{
+    width: rem(86);
+    height: rem(86);
+  }
+  th{
+    font-family: PingFangSC-Semibold,sans-serif;
+    font-size: rem(30);
+    height: rem(120);
+    line-height: rem(120);
+  }
+  td{
+    height: rem(70);
+    line-height: rem(70);
+    .border{
+      border-bottom: rem(1) solid #D6D6D6;
+      width: rem(73);
+      margin-left:rem(73);
+      position: absolute;
+    }
+  }
+}
+.project2-wrap .project2-content-box a{
+  width: rem(477);
+  height: rem(72);
+  margin-top: rem(59);
+  background: #2798F9;
+  border-radius: rem(10);
+  font-family: PingFangSC-Regular,sans-serif;
+  font-size: rem(30);
+  color: #FFFFFF;
+  letter-spacing: 0;
+}
+
+/*客户案例*/
+.case {
+  text-align: center;
+  margin: 0 auto;
+  padding: rem(73) 0 rem(80) 0;
+  background: #FFF;
+}
+.case .content-img{
+  width: rem(686);
+  height: rem(274);
+
+}
+/*联系我们*/
+.contact{
+  width: 100%;
+  height: rem(358);
+  background: #34373B;
+  padding: rem(50) 0 rem(50) rem(49);
+}
+.contact .contact-content{
+
+}
+.contact .footer-left{
+  float: left;
+  width: 41%;
+}
+.contact .footer-right{
+  float: left;
+  width:50%;
+  height: rem(251);
+  border-left: 1px solid #5E5E5E;
+  padding-left: rem(49);
+}
+.contact h3{
+  font-family: PingFangSC-Regular,sans-serif;
+  font-size: rem(30);
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: rem(96);
+}
+.contact p{
+  font-family: PingFangSC-Regular,sans-serif;
+  font-size: rem(26);
+  color: #BDBDBD;
+  letter-spacing: 0;
+}
+/*页脚*/
+.footer-main {
+  width: 100%;
+  height: rem(148);
+  background: #1E1F20;
+  text-align: center;
+  padding: rem(26) 0;
+  p{
+    font-family: PingFangSC-Regular, sans-serif;
+    font-size: rem(20);
+    color: #C6CDCF;
+    letter-spacing: 0;
+    line-height: rem(32);
+  }
+}
+
+
+/*联系我们contact页面~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.project{
+  background: #fff;
+  ul{
+    width: rem(650);
+    margin: 0 auto;
+    padding: rem(40) 0 rem(100) 0;
+    font-family: PingFangSC-Regular,sans-serif;
+    font-size: rem(30);
+    color: #1C1C1C;
+    letter-spacing: 0;
+    background: #fff;
+    li {
+      border-bottom: 1px solid #CDCDCD;
+      &:last-child{ border-bottom:none;}
+      padding-top: rem(20);
+      padding-bottom: rem(20);
+      padding-left: rem(80);
+      .adress-img{
+        width: rem(570);
+        height: rem(160);
+      }
+
+    }
+    .phone{
+      background: url("../img/contact-lianxi_phone.png") no-repeat left 25%;
+      background-size:rem(61) rem(61);
+    }
+    .email{
+      background: url("../img/contact-lianxi_mail.png") no-repeat left 25%;
+      background-size:rem(61) rem(61);
+    }
+    .adress{
+      background: url("../img/contact-lianxi_adress.png") no-repeat left 5%;
+      background-size:rem(61) rem(61);
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  height: rem(122);
+  background: #1E1F20;
+  text-align: center;
+  padding: rem(12) 0;
+  p{
+    font-family: PingFangSC-Regular, sans-serif;
+    font-size: rem(20);
+    color: #C6CDCF;
+    letter-spacing: 0;
+    line-height: rem(32);
+  }
+}
+
+/*申请合作application页面~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.apply{
+  width: 100%;
+  font-family: PingFangSC-Regular,sans-serif;
+  font-size: rem(30);
+  color: #1C1C1C;
+  letter-spacing: 0;
+  line-height: 2.5;
+  span{
+    font-family: PingFangSC-Regular,sans-serif;
+    font-size: rem(34);
+    color: #F1643E;
+    letter-spacing: 0;
+  }
+  .frame{
+    width: rem(654);
+    height: rem(75);
+    border: 1px solid #C8C8C8;
+  }
+  .info{
+    background: #fff;
+    padding-left: rem(47);
+    padding-top: rem(60);
+    margin-bottom: rem(24);
+  }
+  .tel{
+    background: #fff;
+    padding-left: rem(47);
+    padding-bottom: rem(59);
+  }
+  .submit{
+    text-align: center;
+    padding-top: rem(65);
+    padding-bottom: rem(133);
+
+    button{
+      width: rem(350);
+      height: rem(90);
+      background: #14A7FC;
+      border-radius: rem(8);
+      font-family: PingFangSC-Regular,sans-serif;
+      font-size: rem(34);
+      color: #FFFFFF;
+      letter-spacing: 0;
+    }
+  }
+}
+
+/*场景合作sence页面~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.scene-wrap1{
+  width: rem(750);
+  height: rem(563);
+  margin-top: rem(72);
+
+  text-align:center;
+}
+.scene-end{
+  text-align: center;
+  padding-bottom: rem(61);
+  font-family: PingFangSC-Light,sans-serif;
+  font-size: rem(24);
+  color: #5E5E5E;
+  letter-spacing: rem(2.53);
+}
+
+/*场景合作页面的四组~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.scene-title{
+  margin: 0 auto;
+  padding-bottom: rem(35);
+  width: rem(211);
+  text-align: center;
+  font-family: PingFangSC-Medium,sans-serif;
+  font-size:rem(30);
+  color: #383838;
+  letter-spacing: 0;
+  .left{
+    width: rem(12);
+    height: rem(12);
+    transform: rotate(45deg);
+    background: #21A6F9;
+    display: inline-block;
+    float: left;
+    margin-top: rem(18);
+  }
+  .right{
+    width: rem(12);
+    height: rem(12);
+    transform: rotate(45deg);
+    background: #21A6F9;
+    display: inline-block;
+    float: right;
+    margin-top: rem(18);
+  }
+}
+.container-info{
+  .container {
+    width: auto;
+    max-width: rem(768);
+    @include maxWidth();
+    margin: 0 auto;
+    overflow: hidden;
+    background: #fff;
+  }
+}
+.more{
+  text-align: center;
+  a{
+    font-family: PingFangSC-Regular,sans-serif;
+    font-size: rem(28);
+    color:#007aff;
+    letter-spacing: 0;
+  }
+}
+/*体育sports~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.sport-wrap{
+  background: #fff;
+  width: rem(750);
+  padding-top: rem(54);
+  padding-bottom: rem(21);
+  margin-bottom: rem(21);
+  .title-message{
+    margin: 0 auto;
+    width: 90%;
+    li{
+      background: #FFFFFF;
+      box-shadow: 0 rem(4) rem(10) 0 #CDF3FF;
+      font-family: PingFangSC-Regular,sans-serif;
+      font-size: rem(28);
+      color: #808080;
+      letter-spacing: 0;
+      display: inline-block;
+      text-align: center;
+      height: 1rem;
+      line-height: 1rem;
+      width: 32%;
+    }
+    /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!这里用到了js！！！！！！*/
+    >li.active{
+      background-image: linear-gradient(90deg, #48CFF3 0%, #1CA1FA 100%);
+      box-shadow: 0 rem(4) rem(10) 0 #CDF3FF;
+      font-family: PingFangSC-Medium,sans-serif;
+      font-size: rem(30);
+      color: #FFFFFF;
+      letter-spacing: 0;
+    }
+  }
+}
+.tab-box{
+  margin: 0 auto;
+  width: rem(692);
+  li{
+    display: none;
+    text-align: center;
+
+    p{
+      font-family: PingFangSC-Medium,sans-serif;
+      font-size: rem(34);
+      color: #FFFFFF;
+      letter-spacing: 0;
+      line-height: 2.5;
+      padding-top: rem(29);
+      span{
+        font-size: rem(28);
+      }
+    }
+    .sport1{
+      background:url("../img/sports-gongzhongzeren.png");
+      background-size: rem(692) rem(228);
+      width: rem(692);
+      height: rem(228);
+    }
+    .sport2{
+      background:url("../img/sports-zuzhifang.png");
+      background-size: rem(692) rem(228);
+      width: rem(692);
+      height: rem(228);
+    }
+    .sport3{
+      .sport3-1{
+        background:url("../img/sports-yiwai1.png");
+        background-size: rem(692) rem(228);
+        width: rem(692);
+        height: rem(228);
+      }
+      .sport3-2{
+        background:url("../img/sports-yiwai2.png");
+        background-size: rem(692) rem(228);
+        width: rem(692);
+        height: rem(228);
+      }
+      .sport3-3{
+        background:url("../img/sports-yiwai3.png");
+        background-size: rem(692) rem(228);
+        width: rem(692);
+        height: rem(228);
+      }
+      .sport3-4{
+        background:url("../img/sports-yiwai4.png");
+        background-size: rem(692) rem(228);
+        width: rem(692);
+        height: rem(228);
+      }
+      .sport3-5{
+        background:url("../img/sports-yiwai5.png");
+        background-size: rem(692) rem(228);
+        width: rem(692);
+        height: rem(228);
+      }
+    }
+  }
+  >li.live{
+    display: block;
+  }
+}
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!结束！！！！！！*/
+
+
+
+
+.sport{
+  width: 95%;
+  margin: 0 auto;
+  img{
+  }
+}
+.QA{
+  background: #fff;
+  padding-top: rem(41);
+  padding-bottom: rem(37);
+  ul{
+    width: rem(640);
+ /*   height: rem(561);*/
+    margin: 0 auto;
+    li{
+      padding-left: rem(60);
+      padding-top: rem(10);
+      margin-bottom: rem(23);
+      background: url("../img/sports-Q.PNG") no-repeat left top;
+      background-size:rem(61) rem(61);
+      font-family: PingFangSC-Regular,sans-serif;
+      font-size: rem(24);
+      color: #393939;
+      letter-spacing: 0;
+      line-height: rem(33);
+      span{
+        color: #000000;
+      }
+    }
+  }
+}
+/*留学study~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.study-info{
+  width: rem(640);
+  margin: 0 auto;
+  padding-top: rem(55);
+  padding-bottom: rem(35);
+  list-style-type: disc;
+  font-family: PingFangSC-Regular,sans-serif;
+  font-size: rem(24);
+  color: #566979;
+  letter-spacing: 0;
+  line-height: rem(53);
+  padding-left: 3%;
+}
+.study-img1{
+  width: rem(690);
+  height: rem(669);
+}
+.study-project{
+  text-align: center;
+  padding-bottom: rem(55);
+}
+
+.study-warp{
+background: #fff;
+}
+.study-tab-wrap {
+  padding-bottom: rem(44);
+  .tab-box {
+    .study1 {
+      background: url("../img/study-USA.png");
+      background-size: rem(692) rem(228);
+      width: rem(692);
+      height: rem(228);
+    }
+    .study2 {
+      .study2-1 {
+        background: url("../img/study-AUS1.png");
+        background-size: rem(692) rem(228);
+        width: rem(692);
+        height: rem(228);
+      }
+      .study2-2 {
+        background: url("../img/study-AUS2.png");
+        background-size: rem(692) rem(228);
+        width: rem(692);
+        height: rem(228);
+      }
+      .study2-3 {
+        background: url("../img/study-AUS3.png");
+        background-size: rem(692) rem(228);
+        width: rem(692);
+        height: rem(228);
+      }
+
+    }
+  }
+}
+
+/*留学详情studyinfo~~~~~~~~~~~~~~~~~~*/
+.banner2-box{
+  width: 90%;
+  height: rem(152);
+  position: relative;
+  margin: 0 auto rem(53) auto;
+  .banner2{
+    position: absolute;
+    bottom: 0;
+  }
+}
+.studyinfo-project{
+  width: 88%;
+  padding-bottom: rem(65);
+  margin: 0 auto;
+  h3{
+    font-family: PingFangSC-Medium,sans-serif;
+    font-size:rem(30);
+    color: #353535;
+    letter-spacing: 0;
+  }
+  p{
+    font-family: PingFangSC-Regular,sans-serif;
+    font-size: rem(28);
+    color: #566979;
+    letter-spacing: 0;
+    text-align: justify;
+  }
+}
+
+.studyinfo-img{
+  text-align: center;
+  .studyinfo-img1{
+    width: rem(557);
+    height: rem(229);
+    margin: rem(10) 0 0 0;
+  }
+}
+/*O2O~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.scene-title2{
+  text-align: center;
+  padding-top: rem(43);
+  font-family: PingFangSC-Medium,sans-serif;
+  font-size: rem(30);
+  color: #000000;
+  letter-spacing: 0;
+}
+.O2O-info {
+    width: rem(672);
+    margin: 0 auto;
+    padding-top: rem(55);
+    padding-bottom: rem(35);
+    list-style-type: disc;
+  font-family: PingFangSC-Regular,sans-serif;
+  font-size: rem(24);
+  color: #566979;
+  letter-spacing: 0;
+  line-height: rem(33);
+  padding-left: 3%;
+}
+.O2O-img1{
+  width: rem(690);
+ /* height: rem(669);*/
+}
+.O2O-project{
+  text-align: center;
+  padding-bottom: rem(55);
+}
+
+/*金融finance~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.finance-warp{
+  background: #fff;
+  margin-bottom: rem(73);
+  .finance-info-warp {
+    background: url("../img/finance-background.jpg") no-repeat;
+    background-size: rem(692) rem(194);
+    margin: 0 auto ;
+    width: rem(692);
+    padding-left: 10%;
+    .finance-info{
+      width: rem(672);
+      padding-top: rem(16);
+      padding-bottom: rem(19);
+      list-style-type: disc;
+      font-family: PingFangSC-Regular,sans-serif;
+      font-size: rem(24);
+      color: #566979;
+      letter-spacing: 0;
+      line-height: rem(53);
+    }
+  }
+}
+
+/*金融详情financeinfo~~~~~~~~~~~~~~~~~~*/
+
